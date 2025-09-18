@@ -4,15 +4,16 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
+import About from "./components/About";
 
 function App() {
   return (
     <>
       <Navbar />
       <Hero />
-      <div id="home" className="h-screen flex items-center justify-center">
-        <h2 className="text-4xl font-bold">Welcome to my Portfolio</h2>
-      </div>
+      <About />
+      
+    
     </>
   );
 }
