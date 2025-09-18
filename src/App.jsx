@@ -2,15 +2,23 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
+import About from "./components/About";
+import Projects from "./components/Projects"; 
 
 function App() {
   return (
-    <div className="flex h-screen items-center justify-center bg-gray-900">
-      <h1 className="text-4xl font-bold text-white">
-        Tailwind is working! 🚀
-      </h1>
-    </div>
+    <>
+      <Navbar />
+      <Hero />
+      <About />
+      <Projects />
+
+    </>
   );
 }
 
 export default App;
+
+
