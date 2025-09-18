@@ -9,9 +9,9 @@ export default function Projects() {
       tech: ["React", "Vercel", "GitHub"],
       liveLink: "https://docchain-orcin.vercel.app/",
       repoLink: "https://github.com/Falsettooppa/DocChain",
-      image: null, // or use a screenshot/image URL
+      image: null, 
     },
-    // Add more projects here
+    
   ];
 
   return (
