@@ -5,16 +5,16 @@ export default function Projects() {
   const projects = [
     {
       name: "DocChain",
-      description: "A document management & verification app, with secure file sharing and blockchain support.",
-      tech: ["React", "Blockchain", "Vercel" , "Solidity"],
+      description: "A document management & verification app with secure file sharing and blockchain support.",
+      tech: ["React", "Blockchain", "Solidity", "Vercel"],
       liveLink: "https://docchain-orcin.vercel.app/",
       repoLink: "https://github.com/Falsettooppa/DocChain",
-      image: null,  // replace null with screenshot URL or local image
+      image: null,
     },
     {
       name: "Knowbly",
-      description: "An AI chatbot powered app for interactive learning & Q&A.",
-      tech: ["React", "OpenAI / API", "Tailwind"],
+      description: "An AI chatbot-powered app for interactive learning & Q&A.",
+      tech: ["React", "OpenAI API", "Tailwind"],
       liveLink: "https://knowbly.vercel.app/",
       repoLink: "https://github.com/Falsettooppa/knowbly",
       image: null,
@@ -29,29 +29,44 @@ export default function Projects() {
     },
     {
       name: "Olegit Card",
-      description: "Digital business card / personal branding site.",
+      description: "A digital business card and personal branding site.",
       tech: ["React", "Tailwind CSS", "Vercel"],
       liveLink: "https://olegit-card.vercel.app/",
       repoLink: "https://github.com/Falsettooppa/olegit-card",
       image: null,
     },
     {
+      name: "Formify",
+      description: "Form builder app for creating and managing forms easily.",
+      tech: ["React", "Tailwind CSS", "Vercel"],
+      liveLink: "https://formify-phi.vercel.app/",
+      repoLink: "https://github.com/Falsettooppa/formify",
+      image: null,
+    },
+    {
       name: "Personal Finance Tracker",
-      description: "Track your income, expenses and budget with real-time insights.",
+      description: "Track income, expenses, and budgets with real-time insights.",
       tech: ["React", "Charts", "Local Storage"],
       liveLink: "https://personal-finance-tracker-alpha-dusky.vercel.app/",
-      repoLink: "https://github.com/Falsettooppa/personal-finance-tracker", // adjust if exact repo name
+      repoLink: "https://github.com/Falsettooppa/personal-finance-tracker",
+      image: null,
+    },
+    {
+      name: "Ocinema",
+      description: "A movie discovery app with browsing and search features.",
+      tech: ["React", "API Integration", "Vercel"],
+      liveLink: "https://ocinema.vercel.app/",
+      repoLink: "https://github.com/Falsettooppa/ocinema",
       image: null,
     },
     {
       name: "E-commerce Store",
-      description: "Front-end e-commerce template with product listing and cart functionality.",
-      tech: ["Javascript", "Stripe (if used) or placeholder", "Responsive Design"],
+      description: "Front-end e-commerce template with product listings and cart functionality.",
+      tech: ["React", "Stripe (if integrated)", "Responsive Design"],
       liveLink: "https://ecommerce-three-nu-55.vercel.app/",
       repoLink: "https://github.com/Falsettooppa/E-commerce",
       image: null,
     },
-    // More projects can go here …
   ];
 
   return (

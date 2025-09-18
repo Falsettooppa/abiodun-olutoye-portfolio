@@ -5,13 +5,13 @@ export default function Projects() {
   const projects = [
     {
       name: "DocChain",
-      description: "A document management / sharing app (built with React, hosted on Vercel).",
+      description:
+        "A document management / sharing app (built with React, hosted on Vercel).",
       tech: ["React", "Vercel", "GitHub"],
       liveLink: "https://docchain-orcin.vercel.app/",
       repoLink: "https://github.com/Falsettooppa/DocChain",
-      image: null, 
+      image: null,
     },
-    
   ];
 
   return (
