@@ -27,7 +27,7 @@ export default function Footer() {
           <a href="https://linkedin.com/in/abiodunolutoye" target="_blank" rel="noreferrer">
             <FaLinkedin className="hover:text-white" />
           </a>
-          <a href="https://twitter.com/your-twitter" target="_blank" rel="noreferrer">
+          <a href="https://https://x.com/olegitng" target="_blank" rel="noreferrer">
             <FaTwitter className="hover:text-white" />
           </a>
         </div>
