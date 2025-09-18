@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 
 export default function Footer() {
   const [isVisible, setIsVisible] = useState(false);
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [currentTime, setCurrentTime] = useState(new Date());
 
   useEffect(() => {
@@ -15,14 +14,6 @@ export default function Footer() {
 
     return () => clearInterval(timer);
   }, []);
-
-  const handleMouseMove = (e) => {
-    const rect = e.currentTarget.getBoundingClientRect();
-    setMousePosition({
-      x: ((e.clientX - rect.left) / rect.width) * 100,
-      y: ((e.clientY - rect.top) / rect.height) * 100,
-    });
-  };
 
   const socialLinks = [
     {
@@ -67,19 +58,9 @@ export default function Footer() {
   return (
     <footer 
       className="relative overflow-hidden border-t border-white/10"
-      onMouseMove={handleMouseMove}
     >
-      {/* Dynamic gradient background */}
-      <div 
-        className="absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900/30 to-slate-900 transition-all duration-300"
-        style={{
-          background: `radial-gradient(circle at ${mousePosition.x}% ${mousePosition.y}%, 
-            rgba(147, 51, 234, 0.1) 0%, 
-            rgba(79, 70, 229, 0.05) 25%, 
-            rgba(15, 23, 42, 0.8) 50%, 
-            rgba(0, 0, 0, 0.95) 100%)`
-        }}
-      />
+      {/* Static gradient background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900/30 to-slate-900" />
 
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -149,7 +130,7 @@ export default function Footer() {
                 <li key={index}>
                   <a
                     href={link.href}
-                    className="text-gray-400 hover:text-white transition-all duration-300 hover:translate-x-1 flex items-center group"
+                    className="text-gray-400 hover:text-gray-200 transition-all duration-500 hover:translate-x-1 flex items-center group"
                   >
                     <span className="w-0 group-hover:w-2 h-0.5 bg-gradient-to-r from-purple-400 to-cyan-400 transition-all duration-300 mr-0 group-hover:mr-2 rounded-full" />
                     {link.name}
@@ -172,7 +153,7 @@ export default function Footer() {
               </div>
               <a 
                 href="mailto:abiodunolutoye@gmail.com"
-                className="flex items-center gap-2 text-gray-400 hover:text-purple-400 transition-colors duration-300"
+                className="flex items-center gap-2 text-gray-400 hover:text-gray-200 transition-colors duration-500"
               >
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
@@ -207,10 +188,9 @@ export default function Footer() {
                 href={social.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`group relative p-3 bg-white/5 border border-white/10 rounded-full backdrop-blur-sm transition-all duration-300 hover:scale-110 hover:bg-white/10 hover:border-white/20 ${social.color}`}
+                className={`group relative p-3 bg-white/5 border border-white/10 rounded-full backdrop-blur-sm transition-all duration-500 hover:scale-105 hover:bg-white/8 hover:border-white/15 text-gray-400 hover:text-gray-200`}
                 title={social.name}
               >
-                <div className="absolute inset-0 bg-gradient-to-r from-purple-500/20 to-cyan-500/20 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-sm" />
                 <div className="relative z-10">
                   {social.icon}
                 </div>
@@ -223,9 +203,9 @@ export default function Footer() {
         <div className={`flex justify-center mt-12 transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`} style={{ transitionDelay: '800ms' }}>
           <a
             href="#home"
-            className="group flex flex-col items-center text-gray-400 hover:text-white transition-all duration-300"
+            className="group flex flex-col items-center text-gray-400 hover:text-gray-200 transition-all duration-500"
           >
-            <div className="p-3 border border-white/20 rounded-full mb-2 group-hover:border-white/40 group-hover:bg-white/10 transition-all duration-300 backdrop-blur-sm">
+            <div className="p-3 border border-white/20 rounded-full mb-2 group-hover:border-white/25 group-hover:bg-white/5 transition-all duration-500 backdrop-blur-sm">
               <svg className="w-5 h-5 group-hover:-translate-y-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 15l7-7 7 7" />
               </svg>
